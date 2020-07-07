@@ -8,6 +8,10 @@ A facial recognition lockscreen for X11.  Not recommended for use in security-se
 
 ![Screenshot 2](https://github.com/Cubified/faceid_lock.py/blob/master/screenshot2.png)
 
+![Screenshot 3](https://github.com/Cubified/faceid_lock.py/blob/master/screenshot3.png)
+
+![Screenshot 4](https://github.com/Cubified/faceid_lock.py/blob/master/screenshot4.png)
+
 ## Dependencies
 
 - Python 3:
@@ -81,4 +85,5 @@ Although there exists no automatic way to install this script, this can be achie
 
 - Cache background images to avoid slight lag on redraw
 - Transparency
+- Text centering
 - More input backends than solely face?
