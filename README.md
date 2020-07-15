@@ -27,9 +27,9 @@ A facial recognition lockscreen for X11.  Not recommended for use in security-se
 
 Assuming all dependencies have been installed properly (which unfortunately cannot be done with a `requirements.txt` due to freenect not being a `pip` package), simply run:
 
-     $ ./faceid_lock.py
+     $ ./faceid_lock.py --test
 
-To ensure that everything has installed successfully.  It should return an error while also creating the `faceid_lock` configuration directory in `~/.local/share`.  To configure and run properly, see below.
+To ensure that everything has installed successfully.  It should open a black window while also creating the `faceid_lock` configuration directory in `~/.local/share`.  Control+C from the terminal can be used to close this, or the user's password can be entered within the window itself.  To configure and run properly, see below.
 
 ## Configuration
 
@@ -76,8 +76,8 @@ Although there exists no automatic way to install this script, this can be achie
 
 ## To-Do
 
-- Cache background images to avoid slight lag on redraw
-  - Update: Xlib's `put_pil_image`, not PIL image operations, are not the cause of lag, meaning caching has little to no effect on responsiveness (although it does reduce disk usage)
-- Transparency
-- Text centering
-- PIL Image.resize creates black border on bottom when aspect ratio does not match
+- ~~Cache background images to avoid slight lag on redraw~~
+  - Update: Xlib's `put_pil_image`, not PIL image operations, are the cause of lag, meaning caching has little to no effect on responsiveness (although it does reduce disk usage)
+- Transparency (likely already possible with a compositor)
+- Text centering (`python-xlib` does not support XTextExtents, not possible without overly complex logic)
+- Fix PIL Image.resize creating black border on bottom when aspect ratio does not match

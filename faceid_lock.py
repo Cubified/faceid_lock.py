@@ -181,7 +181,12 @@ def x_draw(dpy, win, gc, buf, buf_gc):
     dpy.sync()
 
 def x_init():
-    dpy = display.Display()
+    try:
+        dpy = display.Display()
+    except:
+        print("Error: Failed to open display.")
+        exit(1)
+
     scr = dpy.screen()
     win = scr.root.create_window(
         0, 0,
